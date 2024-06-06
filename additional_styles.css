@@ -1,0 +1,364 @@
+html, body {
+    cursor: url('assets/cursor.png'), auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'W95FA';
+    src: url('assets/W95FA.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'sysfont';
+    src: url('assets/sysfont.otf') format("opentype");
+}
+
+.window {
+    position: absolute;
+}
+
+.title-bar {
+    font-family: 'W95FA';
+}
+
+.title-bar-controls button {
+    cursor: url('assets/point.png'), pointer;
+}
+
+.title-bar-text {
+    display: flex;
+    align-items: center;
+}
+
+.title-bar-text img {
+    height: 14px;
+    padding-right: 5px
+}
+
+.mobile-startup {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+body {
+    margin: 0;
+    background-color: #008080;
+}
+
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #C0C0C0;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.start-pad {
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    background-color: #C0C0C0;
+    cursor: url('assets/point.png'), pointer;
+}
+
+.start-button img{
+    height: 100%
+}
+
+.start-button:hover {
+    background-color: #A0A0A0;
+}
+
+.taskbar-buttons {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.taskbar-button {
+    display: flex;
+    align-items: center;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    padding: 0 10px;
+    height: 80%;
+    background-color: #C0C0C0;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    margin-right: 4px;
+    cursor: url('assets/point.png'), pointer;
+}
+
+.taskbar-button:hover {
+    background-color: #A0A0A0;
+}
+
+.taskbar-clock {
+    display: flex;
+    align-items: center;
+    font-family: 'W95FA';
+    font-size: 14px;
+    padding: 0 10px;
+    height: 60%;
+    background-color: #C0C0C0;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+.start-menu {
+    position: absolute;
+    background-color: #C0C0C0;
+    width: 15%;
+    height: 50%;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: 1px 1px 1px #000000;
+    display: flex;
+    overflow: hidden;
+    top: 45%;
+}
+
+@media (max-width: 768px) {
+    .start-menu {
+        width: 30%;
+    }
+}
+
+.start-menu-item{
+    display: flex;
+    align-items: center;
+    font-family: 'W95FA';
+    padding: 5px 10px;
+    height: 7.5%;
+    width: 90%;
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #808080;
+}
+
+.start-menu-item:hover {
+    background-color: #acacac;
+    border-top: 2px solid #cdcccc;
+    border-bottom: 2px solid #cdcccc;
+    border-left: 2px solid #cdcccc;
+    border-right: 2px solid #cdcccc;
+    cursor: url('assets/point.png'), pointer;
+}
+
+.start-menu-item img {
+    height:100%;
+    padding-right: 5px;
+}
+
+.start-menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar {
+    background: linear-gradient(to bottom, #227ec5, #020263); /* Dark blue to slightly dark blue */
+    width: 14px; /* Adjust width as needed */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl; /* Vertical text orientation */
+    text-align: center;
+    color: white;
+     /* Adjust font size as needed */
+    padding: 5px;
+}
+
+.sidebar-text {
+    transform: rotate(180deg);
+    padding-bottom: 30%;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 20px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-right: 2.5%;
+    gap: 1px;
+}
+
+.desktop-icon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 1%;
+    font-family: 'W95FA';
+    color: #FFFFFF;
+    border: 2px solid #008080;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(93, 93, 93, 0.3);
+    border: 2px dotted #acacac;
+    cursor: url('assets/point.png'), pointer;
+}
+
+#icon-1 {
+    top: 1%;
+}
+
+#login-div {
+    position: absolute;
+}
+
+#login-button {
+    font-family: 'W95FA';
+}
+
+#login-button:hover {
+    cursor: url('assets/point.png'), pointer;
+}
+
+.paint-toolbar {
+    display: flex;
+    border-bottom: 2px solid #000;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+.paint-toolbar button {
+    margin-right: 5px;
+    padding: 5px;
+    font-family: 'W95FA';
+    cursor: url('assets/point.png'), pointer;
+}
+
+.paint-toolbar img {
+    height: 20px;
+}
+
+.canvas-container {
+    flex-grow: 1;
+    border: 2px solid #000;
+    margin-top: 5px;
+    background: white;
+}
+  
+#canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-window {
+	background: silver;
+	position: absolute;
+	box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+	padding: 3px;
+    height: 450px;
+    width: 600px;
+}
+
+.blog-window-body {
+    display: flex;
+    margin-right: 0px;
+    padding-right: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-sidebar {
+    width: 30%;
+    height: 92%;
+    border: 2px solid #808080;
+}
+
+.blog-content{
+    width: 70%;
+    height: 92%;
+    border: 2px solid #808080;
+    border-left: 0px;
+    border-right: 0px;
+    padding-left: 10px;
+}
+
+.blog-entry {
+    width: calc(100% - 8px);
+    border: 2px solid #808080;
+    padding: 2px;
+}
+
+.blog-entry:hover {
+    background-color: #b9b9b9;
+    border: 2px solid #cdcccc;
+    cursor: url('assets/point.png'), pointer;
+}
+
+.blinkie {
+    height: 20px;
+}
+
+.blinkies {
+    width: 200px;
+    border: 2px solid #808080;
+    border-left: 0px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+#about-me {
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+}
+
+#about-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+#about-title img {
+    height: 48px;
+}
+
+#about-title p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#entertechtip:hover {
+    cursor: url('assets/point.png'), pointer;
+}
+
+.about-text {
+    width: 300px;
+    padding: 30px;
+    padding-top: 0px;
+    overflow-y: scroll;
+    border: 2px solid #808080;
+}
